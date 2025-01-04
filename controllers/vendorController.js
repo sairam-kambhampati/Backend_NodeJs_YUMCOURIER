@@ -42,7 +42,6 @@ const vendorLogin = async (req, res) => {
     });
 
     res.status(200).json({ success: "Login Successfully", token });
-    console.log(email, "this is token", token);
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
@@ -67,7 +66,6 @@ const getVendorById = async (req, res) => {
     }
     res.status(200).json({ vendor });
   } catch (error) {
-    console.log(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };

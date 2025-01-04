@@ -38,7 +38,6 @@ const addProduct = async(req, res) => {
 
         res.status(200).json(savedProduct);
     } catch (error) {
-        console.error(error);
         res.status(500).json({error: "Internal Server Error"});
     }
 }
@@ -57,7 +56,6 @@ const getProductByFirm = async(req, res) => {
 
         res.status(200).json({ restaurantName, products });
     } catch (error) {
-        console.error(error);
         res.status(500).json({error: "Internal Server Error"});
     }
 }
@@ -72,7 +70,6 @@ const deleteProductById = async(req, res) => {
             return res.status(404).json({error: "No Product Found"});
         }
      } catch (error) {
-        console.error(error);
         res.status(500).json({error: "Internal Server Error"});
      }
 }

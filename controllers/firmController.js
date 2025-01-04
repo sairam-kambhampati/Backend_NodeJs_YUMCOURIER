@@ -37,7 +37,6 @@ const addFirm = async (req, res) => {
     return res.status(200).json({message: 'Firm Added Successfully'})
 
   } catch (error) {
-    console.error(error);
     res.status(500).json("Internal Server Error");
   }
 };
@@ -52,7 +51,6 @@ const deleteFirmById = async(req, res) => {
          return res.status(404).json({error: "No Product Found"});
      }
   } catch (error) {
-     console.error(error);
      res.status(500).json({error: "Internal Server Error"});
   }
 }
